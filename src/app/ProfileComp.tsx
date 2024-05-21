@@ -39,7 +39,7 @@ const ProfileComp = () => {
       photo = response.data;
       setImage(response.data);
       setPfp(response.data);
-      localStorage.setItem('Profile',response.data);
+      localStorage.setItem('profile',response.data);
       alert('You can login again to see the changes!')
    await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}/app/update_pfp`, {
     profileUrl: photo
