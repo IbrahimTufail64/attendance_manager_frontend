@@ -7,6 +7,7 @@ const NavbarAdmin = () => {
         if(typeof window !== "undefined"){
             setImage(localStorage.getItem('profile'))
         }
+        console.log('image',image)
     })
   return (
       <nav className="w-full h-20 bg-amber-100 flex justify-between px-10 items-center text-2xl font-bold">

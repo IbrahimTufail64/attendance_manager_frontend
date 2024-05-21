@@ -40,6 +40,7 @@ const ProfileComp = () => {
       setImage(response.data);
       setPfp(response.data);
       localStorage.setItem('Profile',response.data);
+      alert('You can login again to see the changes!')
    await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}/app/update_pfp`, {
     profileUrl: photo
    }, {
@@ -60,7 +61,7 @@ const ProfileComp = () => {
             <div className='border border-1 border-black mt-[30px] p-7 w-[50vw]'>
                 <div className='text-xl font-bold flex justify-center w-full'>Profile Info</div>
                 <div className='w-full flex justify-center mt-10'>
-                    {pfp ? 
+                    {pfp  ? 
                     <img src={`${process.env.NEXT_PUBLIC_SERVER_URL}/profile/${pfp}`} className='w-[200px] h-[200px] rounded-full overflow-hidden object-cover' /> : 
                     <img src='https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg' className='w-[200px] h-[200px] rounded-full overflow-hidden object-cover'/>
                     }
