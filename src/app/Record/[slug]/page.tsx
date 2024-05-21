@@ -36,17 +36,28 @@ const Record = ({ params }: { params: { slug: string } }) => {
         <NavbarAdmin/>
         <div>
             <div className='flex w-full justify-center pt-[100px]'>
+             <div>
+                   <div className='w-full flex justify-center my-5 space-x-4'>
+                        <a href={`/PDFView/${Params}`}
+                        className="px-4 rounded-md bg-blue-500 py-2 text-center text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-1 focus:ring-blue-500" 
+                        >
+                        Generate Report for this student
+                    </a>
+                    </div>
                 <div className='border border-1 border-black w-[70vw] p-7'>
+                    
                     <div className='flex justify-between  border-0 border-b-2 border-slate-200 pb-3'>
                         <div className='text-xl font-semibold'>{user.name}</div>
                         <div className='text-xl font-light'>{user.email}</div>
                     </div>
-                    <div className='w-full flex justify-center mt-5'>
-                        <a href={`/CreateAttendance/${Params}`}
-                        className="w-44 rounded-md bg-slate-800 py-2 text-center text-white font-medium hover:bg-slate-600 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    
+                    <div className='w-full flex justify-center mt-5 space-x-4'>
+                    <a href={`/CreateAttendance/${Params}`}
+                        className="w-44 rounded-md bg-blue-500 py-2 text-center text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-1 focus:ring-blue-500" 
                         >
                         Add Attendance
                     </a>
+                    
                     </div>
                     <div className='flex justify-between font-bold mt-5'>
                         <div className='w-1/4 text-start'>Attendance</div>
@@ -61,6 +72,7 @@ const Record = ({ params }: { params: { slug: string } }) => {
                         })
                     }
                 </div>
+             </div>
             </div>
         </div>
     </div>

@@ -25,7 +25,14 @@ const Admin = () => {
   return (
     <div>
         <NavbarAdmin/>
-        <div className='flex justify-center w-full mt-[100px]'>
+        <div className='w-full flex justify-center my-5 space-x-4 mt-[100px]'>
+                        <a href={`/PDFView`}
+                        className="px-4 rounded-md bg-blue-500 py-2 text-center text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-1 focus:ring-blue-500" 
+                        >
+                        Generate Collective Report
+                    </a>
+                    </div>
+        <div className='flex justify-center w-full mt-2'>
         <div className='border border-1 border-black p-6 w-[50vw]'>
             <div className='text-xl font-semibold flex justify-center'>Registered Students</div>
             <div className='text-lg font-medium flex justify-between'>
