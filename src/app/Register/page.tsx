@@ -18,9 +18,9 @@ const router = useRouter()
         password:  password,
       })
     localStorage.setItem('token', res.data.token);
-    localStorage.setItem('name', res.data.name);
-    localStorage.setItem('email', res.data.email);
-    localStorage.setItem('profileUrl', res.data.profileUrl);
+    localStorage.setItem('userName', res.data.name);
+    localStorage.setItem('Email', res.data.email);
+    localStorage.setItem('profile', res.data.profileUrl);
     console.log(res.data);
     router.push('/User', { scroll: false })
     console.log('Form Submitted:', { name, email, password });

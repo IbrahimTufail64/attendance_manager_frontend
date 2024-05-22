@@ -31,6 +31,7 @@ function Login() {
     }
     catch(err:any){
         console.log(err);
+        alert('Error while logging in! Wrong credentials')
     }
   };
 
